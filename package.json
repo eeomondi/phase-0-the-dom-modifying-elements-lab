@@ -1,4 +1,10 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha -R mocha-multi --timeout 5000 --reporter-options spec=-,json=.results.json"
+  },
+
   "name": "javascript-lab",
   "version": "1.0.0",
   "description": "A JavaScript lab",
