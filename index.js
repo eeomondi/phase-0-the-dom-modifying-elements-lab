@@ -1,8 +1,8 @@
-const jsdom = require('jsdom');
+import { JSDOM } from 'jsdom';
 
-const userName = 'John'; // Replace with the actual user's name
+const userName = 'John';
 
-const { window } = new jsdom.JSDOM('<!DOCTYPE html><html><body><main id="main"></main></body></html>', {
+const { window } = new JSDOM('<!DOCTYPE html><html><body><main id="main"></main></body></html>', {
   runScripts: 'dangerously',
   resources: 'usable',
 });
@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(newHeader);
 });
 
-module.exports = { newHeader };
+export default { newHeader };
